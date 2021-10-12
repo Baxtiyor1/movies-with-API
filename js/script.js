@@ -9,9 +9,6 @@ const header = getElem('.header');
 // key
 let KEY = '58ed228a'
 
-// API array
-let moviesArray = []
-
 // render movies
 function renderMovies(array, element){
     element.innerHTML = null
@@ -71,9 +68,8 @@ async function fetchMovies(key, search, page){
     let response = await fetch(`http://www.omdbapi.com/?apikey=${key}&s=${search}&page=${page}`)
     let data = await response.json()
     renderMovies(data.Search, elMenu)
-    console.log(data)
 }
-fetchMovies(KEY, 'someting', pageCount)
+// fetchMovies(KEY, 'someting', pageCount)
 
 // form 
 elForm.addEventListener('submit', (e) => {
