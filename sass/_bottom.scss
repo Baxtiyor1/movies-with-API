@@ -1,0 +1,38 @@
+.buttom{
+    padding: 50px 0;
+    background-color: #000;
+    &__wrapper{
+        margin: 0 auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__button{
+        padding: 10px 25px;
+        font-weight: bold;
+        background-color: #000;
+        color: #fff;
+        font-size: 20px;
+        box-shadow: 0 0 5px 5px #fff;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &__number--pages{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        & li{
+            margin-right: 20px;
+            opacity: 0.7;
+            &:first-child{
+                font-size: 24px;
+                opacity: 1;
+            }
+        }
+    }
+}

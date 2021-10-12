@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    
+</head>
+<body>
+    <header class="header">
+        <h1 class="film__title">Movies</h1>
+    </header>
+    
+    <main>
+        <section class="film">
+            <div class="container">
+                <form class="film__form" id='form'>
+                    <input class="film__info" type="text" id="search" placeholder="search ...">
+                    <select class="film__info" id="film__filter">
+                        <option value="a_z">A-Z</option>
+                        <option value="z_a">Z-A</option>
+                        <option value="new_old">NEW-OLD</option>
+                        <option value="old_new">OLD-NEW</option>
+                    </select>
+                    <button class="film__btn" type="submit" id="btn">Submit</button>
+                </form>
+                <ul class="film__menu"></ul>
+                
+                <div class="modal">
+                    <div class="modal__list">
+                        <button class="modal__btn" type="submit" id="modal__btn">x</button>
+                        <div class="modal__box">
+                            <img class="modal__img">
+                            <ul class="modal__ganres"></ul>
+                        </div>
+                        <p class="modal__text"></p>
+                        <a target="_blank" class="modal__link" href="">see film</a>
+                    </div>
+                </div> 
+                
+                <template id="template">
+                    <li data-aos="zoom-in" class="film__card">
+                        <img class="film__pic" src="https://picsum.photos/300" alt="img" width="300" height="250">
+                        <h2 class="film__card--title">Shazam!</h2>
+                        <time class="film__realise--date"></time>
+                        <button class="film__card--btn" type="submit" id="card_btn">Show more</button>
+                    </li>
+                </template>
+            </div>
+        </section>
+        
+        <section class="buttom">
+            <div class="container">
+                <div class="buttom__wrapper">
+                    <button class="buttom__prev buttom__button" type="button">prev</button>
+                    <ul class="buttom__number--pages">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                    <button class="button__next buttom__button" type="button">next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">Baxtiyor © 2021</p>
+        </div>
+    </footer>
+    
+    <script>
+        AOS.init();
+    </script>
+    
+    <script src="./js/util.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
