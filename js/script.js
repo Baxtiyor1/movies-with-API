@@ -85,7 +85,7 @@ btnPage(pageCount, elPrevBtn)
 // async function
 async function fetchMovies(key, search, page){
     elMenu.innerHTML = '<img src="./img/Spinner.svg" alt="spinner">'
-    let response = await fetch(`http://www.omdbapi.com/?apikey=${key}&s=${search}&page=${page}`)
+    let response = await fetch(`https://www.omdbapi.com/?apikey=${key}&s=${search}&page=${page}`)
     let data = await response.json()
     dataSearch = data.Search
 
